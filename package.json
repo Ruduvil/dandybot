@@ -1,12 +1,7 @@
 {
-  "name": "dandys-world-bot-v3",
-  "version": "3.0.0",
-  "description": "Dandy's World Elite Discord Bot — Slash Commands",
+  "name": "dandys-world-bot",
+  "version": "4.0.0",
   "main": "index.js",
-  "scripts": {
-    "start": "node index.js"
-  },
-  "dependencies": {
-    "discord.js": "^14.0.0"
-  }
+  "scripts": { "start": "node index.js" },
+  "dependencies": { "discord.js": "^14.15.3" }
 }
