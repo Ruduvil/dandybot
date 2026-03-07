@@ -6,6 +6,7 @@ const {
 const config = {
   token: process.env.DISCORD_TOKEN,
   clientId: process.env.CLIENT_ID,
+  guildId: process.env.GUILD_ID,
   ownerId: process.env.OWNER_ID,
 };
 
@@ -218,8 +219,8 @@ client.once('ready', async () => {
   console.log(`✅ Dandy's World Bot online como ${client.user.tag}`);
   const rest = new REST({ version: '10' }).setToken(config.token);
   try {
-    await rest.put(Routes.applicationCommands(config.clientId), { body: commands });
-    console.log('✅ Slash commands registados globalmente.');
+    await rest.put(Routes.applicationGuildCommands(config.clientId, config.guildId), { body: commands });
+    console.log('✅ Slash commands registados no servidor instantaneamente.');
   } catch (err) {
     console.error('❌ Erro ao registar slash commands:', err);
   }
