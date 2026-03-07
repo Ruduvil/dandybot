@@ -1,7 +1,7 @@
 {
-  "name": "dandys-world-bot-v2",
-  "version": "2.0.0",
-  "description": "Dandy's World Elite Discord Bot — Full Auto Setup",
+  "name": "dandys-world-bot-v3",
+  "version": "3.0.0",
+  "description": "Dandy's World Elite Discord Bot — Slash Commands",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
