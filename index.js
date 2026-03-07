@@ -8,10 +8,11 @@ const CLIENT_ID = process.env.CLIENT_ID;
 const OWNER_ID  = process.env.OWNER_ID;
 const GUILD_ID  = process.env.GUILD_ID;
 
-if (!TOKEN)     { console.error('❌ DISCORD_TOKEN em falta!'); process.exit(1); }
-if (!CLIENT_ID) { console.error('❌ CLIENT_ID em falta!');     process.exit(1); }
-if (!OWNER_ID)  { console.error('❌ OWNER_ID em falta!');      process.exit(1); }
-if (!GUILD_ID)  { console.error('❌ GUILD_ID em falta!');      process.exit(1); }
+// Warn but don't exit — Railway injects vars at runtime not build time
+if (!TOKEN)     console.warn('⚠️ DISCORD_TOKEN em falta!');
+if (!CLIENT_ID) console.warn('⚠️ CLIENT_ID em falta!');
+if (!OWNER_ID)  console.warn('⚠️ OWNER_ID em falta!');
+if (!GUILD_ID)  console.warn('⚠️ GUILD_ID em falta!');
 
 // ─── CLIENT ───────────────────────────────────────────────────────────────────
 const client = new Client({
