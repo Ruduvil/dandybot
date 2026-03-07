@@ -4,7 +4,7 @@ const {
 } = require('discord.js');
 
 const config = {
-  token: process.env.TOKEN,
+  token: process.env.DISCORD_TOKEN,
   clientId: process.env.CLIENT_ID,
   ownerId: process.env.OWNER_ID,
 };
