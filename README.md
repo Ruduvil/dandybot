@@ -18,7 +18,7 @@ A Discord bot for your **Dandy's World** Roblox community with:
 4. Enable these **Privileged Gateway Intents**:
    - ✅ Server Members Intent
 5. Go to **OAuth2 → URL Generator**:
-   - Scopes: `bot`, `applications.commands`
+   - Scopes: `bot`, **`applications.commands`** (ESSE É O MAIS IMPORTANTE!)
    - Bot Permissions: `Manage Roles`, `Send Messages`, `Use Slash Commands`
 6. Copy the generated URL → open it → invite the bot to your server
 
@@ -54,12 +54,15 @@ create table verified_users (
 
 ---
 
-### Step 4 — Create Roles in Discord
+**Automated Setup (NEW):**
+You don't need to create these manually anymore!
+1. Invite the bot to your server.
+2. Run `/setup_roles`.
+3. The bot will create all roles and give you the IDs for Railway.
 
-In your Discord server, create all these roles (go to **Server Settings → Roles**):
-
-**Required:**
+**Manual List (if you prefer):**
 - `✅ Verified` — given to everyone who verifies
+... (rest of the list)
 
 **Playstyle (pick one):**
 - `🔧 Extractor`, `🏃 Distractor`, `💚 Supporter`, `🛡️ Survivalist`
@@ -99,12 +102,16 @@ After creating them, right-click each role → **Copy Role ID** (enable Develope
 | `ROLE_PEBBLE`, etc. | Same as above for each role |
 
 5. Railway will auto-build and start the bot!
+6. Once the bot is online, go to any channel in your server and type:
+   > `/setup_roles`
+   This will create all the roles for you automatically and give you a list of IDs to put in Railway!
 
 > ✅ You'll see `🌸 Dandy's World Bot is online!` in the Railway logs when it's running.
 
 ---
 
 ### Step 6 — Set Up a Verification Channel
+... (same as before)
 
 1. Create a `#verify` channel in your server
 2. Restrict it so **only unverified users can see it** (use permissions with your `@Verified` role)
